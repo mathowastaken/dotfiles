@@ -1,0 +1,109 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/powerDraw"
+  ],
+  "modules-center": [
+    "cpu",
+    "temperature",
+    "memory",
+    "disk",
+  ],
+  "modules-right": [
+    "network",
+    "battery",
+    "clock"
+  ],
+  "reload_style_on_change": true,
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "interval": 1,
+    "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar-weeks-pos": "right",
+    "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
+    "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
+    "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
+  },
+  "hyprland/language": {
+    "format": "Lang: {long}"
+  },
+  "disk": {
+    "interval": 30,
+    "format": "|  {percentage_used}% |",
+    "path": "/"
+  },
+  "memory": {
+    "format": "|  {percentage}% "
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "|  {usage}% ",
+      },
+  "temperature": {
+    "format": "|  {temperatureC}°C ",
+    "format-critical": "|  {temperatureC}°C ",
+    "interval": 1,
+    "critical-threshold": 80,
+  },
+  "hyprland/workspaces": {
+    "format": "<span font='18px'>{icon}</span>",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "0": "10",
+    },
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "hyprland/window": {
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  },
+  "network": {
+    "format-wifi": "{essid}   ",
+    "format-ethernet": "{ifname} 󰈀 ",
+    "format-disconnected": " 󱐅 ",
+  },
+  "battery": {
+	"states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"bat": "BAT1",
+	"adapter": "ACAD",
+
+	"format": "{icon}{capacity}% ",
+	"format-charging": "󰂄 {capacity}% ", 
+	"format-full": "󰂄{capacity}% ",
+	"format-icons": [" 󰂎 ", " 󰁺 ", " 󰁻 ", " 󰁼 ", " 󰁽 ", " 󰁾 ", " 󰁿 ", " 󰂀 ", " 󰂁" , " 󰂂 ", " 󰁹 "],
+
+	"tooltip": true,
+	"tooltip-format": "{timeTo}\nPower: {power} Watt",
+  },
+  "format-time": "{:%I:%M}",  
+  "tooltip": "{:%I:%M %p}"   
+}
